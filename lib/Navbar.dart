@@ -20,7 +20,7 @@ class DesktopNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 60),
       child: Container(
         // constraints: BoxConstraints(maxWidth: 1200),
         child: Row(
@@ -58,9 +58,6 @@ class DesktopNavbar extends StatelessWidget {
               width: 30,
             ),
             MaterialButton(
-              color: Colors.pink,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(20.0))),
               onPressed: () {},
               child: Text(
                 "Get Started",
@@ -93,13 +90,12 @@ class MobileNavbar extends StatelessWidget {
                   child: Text(
                     "Home",
                     style: TextStyle(
-                      fontFamily: 'Montserrat',
                       color: fontColor,
                     ),
                   ),
                 ),
                 SizedBox(
-                  width: 30,
+                  width: 10,
                 ),
                 MaterialButton(
                   onPressed: () {},
@@ -109,7 +105,7 @@ class MobileNavbar extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 30,
+                  width: 10,
                 ),
                 MaterialButton(
                   onPressed: () {},
@@ -117,9 +113,6 @@ class MobileNavbar extends StatelessWidget {
                     "Meet Thapar Alumni",
                     style: TextStyle(color: fontColor),
                   ),
-                ),
-                SizedBox(
-                  width: 30,
                 ),
               ],
             ),
