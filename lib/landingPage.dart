@@ -21,6 +21,10 @@ class LandingPage extends StatelessWidget {
                     "assets/images/tilogo.png",
                     width: 80,
                   ),
+                  Image.asset(
+                    "assets/images/vertical_line.png",
+                    height: 80,
+                  ),
                   // Divider(
                   //   // thickness: 5,
                   //   // height: 50.0,
