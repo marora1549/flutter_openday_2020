@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tiet_openday_website/csed.dart';
+import 'package:tiet_openday_website/ece.dart';
+import 'package:tiet_openday_website/eic.dart';
+import 'package:tiet_openday_website/mec.dart';
 
 class Streams extends StatelessWidget {
   @override
@@ -13,8 +17,7 @@ class Streams extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          child: Expanded(
-            child: Padding(
+          child:  Padding(
               padding:
                   const EdgeInsets.symmetric(vertical: 20.0, horizontal: 40.0),
               child: Column(
@@ -23,29 +26,53 @@ class Streams extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 10.0),
                     child: Row(
                       children: [
-                        MaterialButton(
-                          onPressed: () {},
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CsedScreen()),
+                            );
+                          },
                           child: Image.asset(
                             "assets/images/coe.png",
                             width: 250,
                           ),
                         ),
-                        MaterialButton(
-                          onPressed: () {},
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ECEScreen()),
+                            );
+                          },
                           child: Image.asset(
                             "assets/images/ece.png",
                             width: 250,
                           ),
                         ),
-                        MaterialButton(
-                          onPressed: () {},
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => EICScreen()),
+                            );
+                          },
                           child: Image.asset(
                             "assets/images/eic.png",
                             width: 250,
                           ),
                         ),
-                        MaterialButton(
-                          onPressed: () {},
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MECScreen()),
+                            );
+                          },
                           child: Image.asset(
                             "assets/images/civil.png",
                             width: 250,
@@ -58,22 +85,40 @@ class Streams extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 10.0),
                     child: Row(
                       children: [
-                        MaterialButton(
-                          onPressed: () {},
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MECScreen()),
+                            );
+                          },
                           child: Image.asset(
                             "assets/images/chemical.png",
                             width: 250,
                           ),
                         ),
-                        MaterialButton(
-                          onPressed: () {},
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MECScreen()),
+                            );
+                          },
                           child: Image.asset(
                             "assets/images/mec.png",
                             width: 250,
                           ),
                         ),
-                        MaterialButton(
-                          onPressed: () {},
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CsedScreen()),
+                            );
+                          },
                           child: Image.asset(
                             "assets/images/bio.png",
                             width: 250,
@@ -85,7 +130,7 @@ class Streams extends StatelessWidget {
                 ],
               ),
             ),
-          ),
+          
         ),
       ),
     );

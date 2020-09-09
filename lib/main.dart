@@ -10,7 +10,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'TIET OPEN DAY 2020',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Montserrat',
         primarySwatch: Colors.blue,

@@ -22,8 +22,7 @@ class HomePage extends StatelessWidget {
           ..style.border = 'none');
     return Scaffold(
       body: SingleChildScrollView(
-        child: Expanded(
-          child: Column(
+        child:  Column(
             children: [
               Container(
                 height: MediaQuery.of(context).size.height,
@@ -76,21 +75,20 @@ class HomePage extends StatelessWidget {
                       borderRadius: BorderRadius.all(
                         Radius.circular(20),
                       ),
-                      /* image: DecorationImage(
+                      image: DecorationImage(
                         image: AssetImage('assets/images/timap.png'),
                         fit: BoxFit.cover,
-                      ), */
+                      ),
                     ),
-                    child: HtmlElementView(
+                    /* child: HtmlElementView(
                       viewType: viewID,
-                    ),
+                    ), */
                   ),
                 ),
               )
             ],
           ),
         ),
-      ),
     );
   }
 }
