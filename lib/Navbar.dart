@@ -64,7 +64,7 @@ class DesktopNavbar extends StatelessWidget {
             MaterialButton(
               onPressed: () {},
               child: Text(
-                "Get Started",
+                "FAQs",
                 style: TextStyle(color: fontColor),
               ),
             )
