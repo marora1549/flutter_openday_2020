@@ -66,6 +66,7 @@ class HomePage extends StatelessWidget {
                     image: DecorationImage(
                       image: AssetImage('assets/images/timap.png'),
                       fit: BoxFit.cover,
+                      //TODO: Make this photo draggable and zoomable
                     ),
                   ),
                 ),

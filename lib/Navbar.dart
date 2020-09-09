@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tiet_openday_website/streams.dart';
 
 class Navbar extends StatelessWidget {
   @override
@@ -38,7 +39,10 @@ class DesktopNavbar extends StatelessWidget {
               width: 30,
             ),
             MaterialButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Streams()));
+              },
               child: Text(
                 "Engineering Streams",
                 style: TextStyle(color: fontColor),
