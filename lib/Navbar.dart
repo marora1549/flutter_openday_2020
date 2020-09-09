@@ -16,6 +16,7 @@ class Navbar extends StatelessWidget {
 }
 
 class DesktopNavbar extends StatelessWidget {
+  Color fontColor = Color(0xff103C55);
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -24,23 +25,34 @@ class DesktopNavbar extends StatelessWidget {
         // constraints: BoxConstraints(maxWidth: 1200),
         child: Row(
           children: <Widget>[
-            Text(
-              "Home",
-              style: TextStyle(color: Colors.white),
+            MaterialButton(
+              onPressed: () {},
+              child: Text(
+                "Home",
+                style: TextStyle(
+                  color: fontColor,
+                ),
+              ),
             ),
             SizedBox(
               width: 30,
             ),
-            Text(
-              "Engineering Streams",
-              style: TextStyle(color: Colors.white),
+            MaterialButton(
+              onPressed: () {},
+              child: Text(
+                "Engineering Streams",
+                style: TextStyle(color: fontColor),
+              ),
             ),
             SizedBox(
               width: 30,
             ),
-            Text(
-              "Meet Thapar Alumni",
-              style: TextStyle(color: Colors.white),
+            MaterialButton(
+              onPressed: () {},
+              child: Text(
+                "Meet Thapar Alumni",
+                style: TextStyle(color: fontColor),
+              ),
             ),
             SizedBox(
               width: 30,
@@ -52,7 +64,7 @@ class DesktopNavbar extends StatelessWidget {
               onPressed: () {},
               child: Text(
                 "Get Started",
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: fontColor),
               ),
             )
           ],
@@ -63,34 +75,51 @@ class DesktopNavbar extends StatelessWidget {
 }
 
 class MobileNavbar extends StatelessWidget {
+  Color fontColor = Color(0xff103C55);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
       child: Container(
         child: Column(children: <Widget>[
           Padding(
-            padding: const EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(5.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text(
-                  "Home",
-                  style: TextStyle(color: Colors.white),
+                MaterialButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Home",
+                    style: TextStyle(
+                      fontFamily: 'Montserrat',
+                      color: fontColor,
+                    ),
+                  ),
                 ),
                 SizedBox(
                   width: 30,
                 ),
-                Text(
-                  "About Us",
-                  style: TextStyle(color: Colors.white),
+                MaterialButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Engineering Streams",
+                    style: TextStyle(color: fontColor),
+                  ),
                 ),
                 SizedBox(
                   width: 30,
                 ),
-                Text(
-                  "Portfolio",
-                  style: TextStyle(color: Colors.white),
+                MaterialButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Meet Thapar Alumni",
+                    style: TextStyle(color: fontColor),
+                  ),
+                ),
+                SizedBox(
+                  width: 30,
                 ),
               ],
             ),
