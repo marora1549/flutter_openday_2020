@@ -2,12 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:tiet_openday_website/Navbar.dart';
 import 'package:tiet_openday_website/cardList.dart';
 import 'package:tiet_openday_website/tiles.dart';
+import 'dart:html' as html;
+import 'dart:js' as js;
+import 'dart:ui' as ui;
 
 import 'landingPage.dart';
 
 class HomePage extends StatelessWidget {
+  String viewID = "1";
   @override
   Widget build(BuildContext context) {
+    //ignore: undefined_prefixed_name
+    ui.platformViewRegistry.registerViewFactory(
+        viewID,
+        (int id) => html.IFrameElement()
+          ..width = MediaQuery.of(context).size.width.toString()
+          ..height = MediaQuery.of(context).size.height.toString()
+          ..src = 'assets/maps/index.html'
+          ..style.border = 'none');
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -63,10 +75,13 @@ class HomePage extends StatelessWidget {
                     borderRadius: BorderRadius.all(
                       Radius.circular(20),
                     ),
-                    image: DecorationImage(
+                    /* image: DecorationImage(
                       image: AssetImage('assets/images/timap.png'),
                       fit: BoxFit.cover,
-                    ),
+                    ), */
+                  ),
+                  child: HtmlElementView(
+                    viewType: viewID,
                   ),
                 ),
               ),
