@@ -21,9 +21,12 @@ class LandingPage extends StatelessWidget {
                     "assets/images/tilogo.png",
                     width: 80,
                   ),
-                  Image.asset(
-                    "assets/images/vertical_line.png",
-                    height: 80,
+                  Padding(
+                    padding: const EdgeInsets.only(right: 8.0),
+                    child: Image.asset(
+                      "assets/images/vertical_line.png",
+                      height: 100,
+                    ),
                   ),
                   // Divider(
                   //   // thickness: 5,
@@ -65,10 +68,10 @@ class LandingPage extends StatelessWidget {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 5.0),
+                padding: const EdgeInsets.symmetric(vertical: 0.0),
                 child: Image.asset(
                   "assets/images/horizontal_line.png",
-                  width: 390,
+                  width: 400,
                 ),
               ),
               // Divider(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tiet_openday_website/Navbar.dart';
+import 'package:tiet_openday_website/tiles.dart';
 
 import 'landingPage.dart';
 
@@ -20,7 +21,8 @@ class HomePage extends StatelessWidget {
               padding: EdgeInsets.only(
                   top: MediaQuery.of(context).size.height / 9, left: 40.0),
               child: LandingPage(),
-            )
+            ),
+            MenuTile(),
           ],
         ),
       ),
