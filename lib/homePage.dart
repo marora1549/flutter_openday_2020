@@ -22,71 +22,73 @@ class HomePage extends StatelessWidget {
           ..style.border = 'none');
     return Scaffold(
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              height: MediaQuery.of(context).size.height,
-              decoration: BoxDecoration(
-                image: DecorationImage(
+        child: Expanded(
+          child: Column(
+            children: [
+              Container(
+                height: MediaQuery.of(context).size.height,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/slides1.png'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                child: Column(
+                  children: <Widget>[
+                    Navbar(),
+                    Padding(
+                      padding: EdgeInsets.only(
+                          top: MediaQuery.of(context).size.height / 9,
+                          left: 40.0),
+                      child: LandingPage(),
+                    ),
+                    // Row(
+                    //   children: [
+                    //     Padding(
+                    //       padding: const EdgeInsets.symmetric(vertical: 0.0),
+                    //       child: Image.asset(
+                    //         "assets/images/alumni.png",
+                    //         width: 300,
+                    //       ),
+                    //     ),
+                    //   ],
+                    // )
+                    Padding(
+                      padding: EdgeInsets.only(left: 40.0),
+                      child: CardList(),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
                   image: AssetImage('assets/images/slides1.png'),
                   fit: BoxFit.cover,
-                ),
-              ),
-              child: Column(
-                children: <Widget>[
-                  Navbar(),
-                  Padding(
-                    padding: EdgeInsets.only(
-                        top: MediaQuery.of(context).size.height / 9,
-                        left: 40.0),
-                    child: LandingPage(),
-                  ),
-                  // Row(
-                  //   children: [
-                  //     Padding(
-                  //       padding: const EdgeInsets.symmetric(vertical: 0.0),
-                  //       child: Image.asset(
-                  //         "assets/images/alumni.png",
-                  //         width: 300,
-                  //       ),
-                  //     ),
-                  //   ],
-                  // )
-                  Padding(
-                    padding: EdgeInsets.only(left: 40.0),
-                    child: CardList(),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                image: AssetImage('assets/images/slides1.png'),
-                fit: BoxFit.cover,
-              )),
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 40.0, vertical: 20),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(20),
+                )),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 40.0, vertical: 20),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(20),
+                      ),
+                      /* image: DecorationImage(
+                        image: AssetImage('assets/images/timap.png'),
+                        fit: BoxFit.cover,
+                      ), */
                     ),
-                    /* image: DecorationImage(
-                      image: AssetImage('assets/images/timap.png'),
-                      fit: BoxFit.cover,
-                    ), */
-                  ),
-                  child: HtmlElementView(
-                    viewType: viewID,
+                    child: HtmlElementView(
+                      viewType: viewID,
+                    ),
                   ),
                 ),
-              ),
-            )
-          ],
+              )
+            ],
+          ),
         ),
       ),
     );
