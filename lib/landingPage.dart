@@ -10,6 +10,8 @@ class LandingPage extends StatelessWidget {
         child: Container(
           width: width,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -58,9 +60,12 @@ class LandingPage extends StatelessWidget {
                   ),
                 ],
               ),
-              Image.asset(
-                "assets/images/horizontal_line.png",
-                width: 80,
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 5.0),
+                child: Image.asset(
+                  "assets/images/horizontal_line.png",
+                  width: 390,
+                ),
               ),
               // Divider(
               //   // height: 50.0,
