@@ -15,10 +15,11 @@ class HomePage extends StatelessWidget {
             Container(
               height: MediaQuery.of(context).size.height,
               decoration: BoxDecoration(
-                  image: DecorationImage(
-                image: AssetImage('assets/images/slides1.png'),
-                fit: BoxFit.cover,
-              )),
+                image: DecorationImage(
+                  image: AssetImage('assets/images/slides1.png'),
+                  fit: BoxFit.cover,
+                ),
+              ),
               child: Column(
                 children: <Widget>[
                   Navbar(),
@@ -48,11 +49,27 @@ class HomePage extends StatelessWidget {
             ),
             Container(
               height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                image: AssetImage('assets/images/slides2.jpg'),
+                image: AssetImage('assets/images/slides1.png'),
                 fit: BoxFit.cover,
               )),
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 40.0, vertical: 20),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20),
+                    ),
+                    image: DecorationImage(
+                      image: AssetImage('assets/images/timap.png'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
             )
           ],
         ),
