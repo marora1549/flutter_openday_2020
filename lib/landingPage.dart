@@ -6,7 +6,7 @@ class LandingPage extends StatelessWidget {
   List<Widget> pageChildren(double width, double padding) {
     return <Widget>[
       Padding(
-        padding: EdgeInsets.symmetric(horizontal: padding),
+        padding: EdgeInsets.only(left: padding),
         child: Container(
           width: width,
           child: Column(
@@ -58,16 +58,23 @@ class LandingPage extends StatelessWidget {
                   ),
                 ],
               ),
-              Divider(
-                // height: 50.0,
-                color: fontColor,
+              Image.asset(
+                "assets/images/horizontal_line.png",
+                width: 80,
               ),
+              // Divider(
+              //   // height: 50.0,
+              //   color: fontColor,
+              // ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
                     "Thapar Institute of Engineering",
-                    style: TextStyle(fontSize: 25.0, color: fontColor),
+                    style: TextStyle(
+                        fontSize: 25.0,
+                        color: fontColor,
+                        fontWeight: FontWeight.w600),
                   ),
                   // Divider(
                   //                 //   color: Colors.black,
@@ -78,11 +85,17 @@ class LandingPage extends StatelessWidget {
                     children: [
                       Text(
                         "& Technology ",
-                        style: TextStyle(fontSize: 25.0, color: fontColor),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 25.0,
+                            color: fontColor),
                       ),
                       Text(
                         "WELCOMES YOU",
-                        style: TextStyle(fontSize: 25.0, color: red),
+                        style: TextStyle(
+                            fontSize: 25.0,
+                            color: red,
+                            fontWeight: FontWeight.w600),
                       ),
                     ],
                   ),

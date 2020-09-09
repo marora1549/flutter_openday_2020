@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-          image: AssetImage('assets/images/hostelm.jpg'),
+          image: AssetImage('assets/images/slides1.png'),
           fit: BoxFit.cover,
         )),
         child: Column(
